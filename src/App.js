@@ -70,7 +70,7 @@ function App() {
         <h1>Hello! Let me guess some stuff about you!</h1>
       </header>
       <main className="App__content">
-        <form class="SearchGroup" onSubmit={handleSubmit}>
+        <form className="SearchGroup" onSubmit={handleSubmit}>
           <SearchInput
             value={nameInput}
             onChange={handleInputChange}
