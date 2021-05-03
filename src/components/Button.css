@@ -1,0 +1,14 @@
+.Button {
+  font-size: 3rem;
+  background: var(--main-color-900);
+  border: none;
+  padding: 0.25em 0.75em;
+  color: white;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.Button:hover {
+  background: var(--main-color-100);
+  color: var(--main-color-900);
+}

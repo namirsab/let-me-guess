@@ -1,0 +1,12 @@
+.SearchInput {
+  font-size: 3rem;
+  border: none;
+  border-bottom: 1px solid var(--main-color-900);
+  color: var(--main-color-900);
+  transition: border 0.5s ease;
+}
+
+.SearchInput:focus {
+  outline: none;
+  border-bottom: 3px solid var(--main-color-900);
+}

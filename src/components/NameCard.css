@@ -1,0 +1,35 @@
+.NameCard {
+  font-family: sans-serif;
+
+  padding: 0.75rem 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: -1px 7px 16px -6px var(--main-color-100);
+  display: grid;
+}
+
+.NameCard__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--main-color-100);
+}
+
+.NameCard__content {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.NameCard__content__age {
+  font-size: 4rem;
+}
+
+.NameCard__content__age::after {
+  font-size: 1rem;
+  content: " years";
+}
+
+.NameCard__content__gender {
+  font-size: 2rem;
+}
