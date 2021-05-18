@@ -6,17 +6,16 @@ export default function NameCard({ name, nationality, gender, age }) {
 
   return (
     <article className="NameCard">
-      <header className="NameCard__header">
+      <header className="NameCard-header">
         <h3>{name}</h3>
-        <div className="NameCard__header__nationality">
+        <div className="NameCard-header__nationality">
           {nationality && <Flag country={nationality} />}
         </div>
       </header>
-      <section className="NameCard__content">
-        <div className="NameCard__content__age">{age}</div>
-        <div className="NameCard__content__gender">{genderIcon}</div>
+      <section className="NameCard-content">
+        <div className="NameCard-content__age">{age}</div>
+        <div className="NameCard-content__gender">{genderIcon}</div>
       </section>
-      <footer className="NameCard__footer"></footer>
     </article>
   );
 }

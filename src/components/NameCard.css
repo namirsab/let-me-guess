@@ -7,29 +7,29 @@
   display: grid;
 }
 
-.NameCard__header {
+.NameCard-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--main-color-100);
 }
 
-.NameCard__content {
+.NameCard-content {
   margin-top: 1em;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.NameCard__content__age {
+.NameCard-content__age {
   font-size: 4rem;
 }
 
-.NameCard__content__age::after {
+.NameCard-content__age::after {
   font-size: 1rem;
   content: " years";
 }
 
-.NameCard__content__gender {
+.NameCard-content__gender {
   font-size: 2rem;
 }
