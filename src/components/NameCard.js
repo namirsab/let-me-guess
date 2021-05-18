@@ -9,7 +9,7 @@ export default function NameCard({ name, nationality, gender, age }) {
       <header className="NameCard__header">
         <h3>{name}</h3>
         <div className="NameCard__header__nationality">
-          <Flag country={nationality} />
+          {nationality && <Flag country={nationality} />}
         </div>
       </header>
       <section className="NameCard__content">
