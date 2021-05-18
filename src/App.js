@@ -78,7 +78,7 @@ function App() {
           />
           <Button type="submit" text="Go!" />
         </form>
-        <section className="App__content__results">{renderResults()}</section>
+        <section className="NameCardList">{renderResults()}</section>
       </main>
     </div>
   );
