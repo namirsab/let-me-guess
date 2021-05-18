@@ -34,6 +34,7 @@ function App() {
       setResults((oldResults) => {
         return [
           {
+            id: nameInput + Date.now(),
             name: nameInput,
             nationality: nationalityResponse.country[0]?.country_id,
             gender: genderResponse.gender,
@@ -51,14 +52,14 @@ function App() {
   }
 
   function renderResults() {
-    return results.map((result, index) => {
+    return results.map((result) => {
       return (
         <NameCard
           name={result.name}
           nationality={result.nationality}
           gender={result.gender}
           age={result.age}
-          key={index}
+          key={result.id}
         />
       );
     });
