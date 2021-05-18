@@ -3,6 +3,7 @@ import "./App.css";
 import Button from "./components/Button";
 import NameCard from "./components/NameCard";
 import SearchInput from "./components/SearchInput";
+import sumAges from "./utils/sumAges";
 
 function getAge(name) {
   const url = `https://api.agify.io/?name=${name}`;
@@ -70,6 +71,7 @@ function App() {
         <h1>Hello! Let me guess some stuff about you!</h1>
       </header>
       <main className="App__content">
+        <section className="App__content__ages-sum">{sumAges(results)}</section>
         <form className="SearchGroup" onSubmit={handleSubmit}>
           <SearchInput
             value={nameInput}
