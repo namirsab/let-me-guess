@@ -1,4 +1,4 @@
-import { render, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import Button from "./Button";
 
 describe("<Button />", () => {
@@ -7,21 +7,21 @@ describe("<Button />", () => {
   });
 
   it("renders the text given as a prop", () => {
-    const { getByText } = render(<Button text="Test" />);
-    expect(getByText("Test")).toBeInTheDocument();
+    render(<Button text="Test" />);
+    expect(screen.getByText("Test")).toBeInTheDocument();
   });
 
   it("renders the button with the type given as prop", () => {
-    const { getByText } = render(<Button type="submit" text="Test" />);
-    const element = getByText("Test");
-    expect(element.type).toEqual("submit");
+    render(<Button type="submit" text="Test" />);
+    const element = screen.getByRole("button", { type: "submit" });
+    expect(element).toBeInTheDocument();
   });
 
   it("calls the onClick callback passed when the button is clicked", () => {
     const handleClick = jest.fn();
-    const { getByText } = render(<Button onClick={handleClick} text="Test" />);
+    render(<Button onClick={handleClick} text="Test" />);
 
-    fireEvent.click(getByText("Test"));
+    fireEvent.click(screen.getByText("Test"));
 
     expect(handleClick).toHaveBeenCalled();
   });
