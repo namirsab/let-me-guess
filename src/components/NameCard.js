@@ -1,7 +1,7 @@
+import { memo } from "react";
 import Flag from "react-flagkit";
 import "./NameCard.css";
-
-export default function NameCard({ name, nationality, gender, age }) {
+function NameCard({ name, nationality, gender, age }) {
   const genderIcon = gender === "male" ? "♂" : "♀";
 
   return (
@@ -19,3 +19,5 @@ export default function NameCard({ name, nationality, gender, age }) {
     </article>
   );
 }
+
+export default memo(NameCard);

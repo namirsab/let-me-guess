@@ -3,6 +3,8 @@ import "./App.css";
 import Button from "./components/Button";
 import NameCard from "./components/NameCard";
 import SearchInput from "./components/SearchInput";
+import countByGender from "./utils/countByGender";
+import sumAges from "./utils/sumAges";
 
 function getAge(name) {
   const url = `https://api.agify.io/?name=${name}`;
@@ -51,6 +53,20 @@ function App() {
     setNameInput(event.target.value);
   }
 
+  function renderStats() {
+    const sumOfAges = sumAges(results);
+    const genderCount = countByGender(results);
+
+    return (
+      <section className="Stats">
+        <h3>Sum of years: {sumOfAges}</h3>
+        <h3>Gender Count</h3>
+        <h4>Male: {genderCount.male}</h4>
+        <h4>Female: {genderCount.female}</h4>
+      </section>
+    );
+  }
+
   function renderResults() {
     return results.map((result) => {
       return (
@@ -79,6 +95,7 @@ function App() {
           />
           <Button type="submit" text="Go!" />
         </form>
+        {renderStats()}
         <section className="NameCardList">{renderResults()}</section>
       </main>
     </div>
